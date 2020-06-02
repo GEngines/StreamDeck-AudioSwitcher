@@ -70,6 +70,7 @@ class MyStreamDeckPlugin : public ESDBasePlugin {
     Role role;
     std::string primaryDevice;
     std::string secondaryDevice;
+    std::string tertiaryDevice;
   };
   static ButtonSettings ButtonSettingsFromJSON(const json& payload);
   void UpdateCallback(

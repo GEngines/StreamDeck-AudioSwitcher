@@ -45,6 +45,11 @@
 			<select class="sdpi-item-value select" id="secondaryDevice" onchange="saveSettings();">
 			</select>
 		</div>
+		<div type="select" class="sdpi-item" id="tertiaryDeviceDiv">
+			<div class="sdpi-item-label">Tertiary</div>
+			<select class="sdpi-item-value select" id="tertiaryDevice" onchange="saveSettings();">
+			</select>
+		</div>
 	</div>
 
 	<script src="common.js"></script>
@@ -93,12 +98,15 @@
 		function updateDeviceLists(devices) {
 			const primarySelector = document.getElementById('primaryDevice');
 			const secondarySelector = document.getElementById('secondaryDevice');
+      const tertiarySelector = document.getElementById('tertiaryDevice');
 			const primaryId = settings['primary'];
 			const secondaryId = settings['secondary'];
+      const tertiaryId = settings['tertiary'];
 			
 			while (primarySelector.firstChild) {
 				primarySelector.removeChild(primarySelector.firstChild);
 				secondarySelector.removeChild(secondarySelector.firstChild);
+        tertiarySelector.removeChild(tertiarySelector.firstChild);
 			}
 			
 			Object.keys(devices).map(deviceId => {
@@ -107,6 +115,7 @@
 				primaryOption.setAttribute("value", deviceId);
 				primaryOption.setAttribute("label", deviceName);
 				const secondaryOption = primaryOption.cloneNode();
+        const tertiaryOption = primaryOption.cloneNode();
 				
 				if (primaryId === deviceId) {
 					primaryOption.setAttribute("selected", true);
@@ -114,8 +123,12 @@
 				if (secondaryId === deviceId) {
 					secondaryOption.setAttribute("selected", true);
 				}
+        if (tertiaryId === deviceId) {
+          tertiaryOption.setAttribute("selected", true);
+        }
 				primarySelector.appendChild(primaryOption);
 				secondarySelector.appendChild(secondaryOption);
+				tertiarySelector.appendChild(tertiaryOption);
 			});
 		}
 		
@@ -137,6 +150,7 @@
 			if (actionInfo == "com.fredemmott.audiooutputswitch.set") {
 				document.querySelector('#primaryDeviceDiv .sdpi-item-label').innerText = 'Device';
 				document.getElementById('secondaryDeviceDiv').style.display = 'none';
+        document.getElementById('tertiaryDeviceDiv').style.display = 'none';
 			}
 
 			// request settings and list of devices
@@ -146,6 +160,7 @@
 		function saveSettings() {
 			settings.primary = document.getElementById('primaryDevice').value;
 			settings.secondary = document.getElementById('secondaryDevice').value;
+			settings.tertiary = document.getElementById('tertiaryDevice').value;
 			settings.direction = document.getElementById('input').checked ? 'input' : 'output';
 			settings.role = document.getElementById('defaultRole').checked ? 'default' : 'communication';
 			$SD.api.setSettings(uuid, settings);

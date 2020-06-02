@@ -144,6 +144,8 @@ MyStreamDeckPlugin::ButtonSettings MyStreamDeckPlugin::ButtonSettingsFromJSON(
     = EPLJSONUtils::GetStringByName(jsonSettings, "primary");
   settings.secondaryDevice
     = EPLJSONUtils::GetStringByName(jsonSettings, "secondary");
+  settings.tertiaryDevice
+    = EPLJSONUtils::GetStringByName(jsonSettings, "tertiary");
   settings.direction
     = EPLJSONUtils::GetStringByName(jsonSettings, "direction", "output")
           == "output"
@@ -165,8 +167,9 @@ void MyStreamDeckPlugin::UpdateState(
                                           settings.direction, settings.role)
                                       : _active;
   DebugPrint(
-    "SDAudioSwitch: setting active ID %s %s %s", active.c_str(),
-    settings.primaryDevice.c_str(), settings.secondaryDevice.c_str());
+    "SDAudioSwitch: setting active ID %s %s %s %s", active.c_str(),
+    settings.primaryDevice.c_str(), settings.secondaryDevice.c_str(),
+    settings.tertiaryDevice.c_str());
 
     std::scoped_lock lock(mVisibleContextsMutex);
   if (action == SET_ACTION_ID) {

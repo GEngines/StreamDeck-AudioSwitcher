@@ -1,0 +1,10 @@
+E:/Design/CodingStuff/C++/StreamDeck-AudioSwitcher/Sources/Vendor/websocketpp/out/build/x64-Debug/CMakeFiles/install/local.dir
+E:/Design/CodingStuff/C++/StreamDeck-AudioSwitcher/Sources/Vendor/websocketpp/out/build/x64-Debug/CMakeFiles/install.dir
+E:/Design/CodingStuff/C++/StreamDeck-AudioSwitcher/Sources/Vendor/websocketpp/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+E:/Design/CodingStuff/C++/StreamDeck-AudioSwitcher/Sources/Vendor/websocketpp/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+E:/Design/CodingStuff/C++/StreamDeck-AudioSwitcher/Sources/Vendor/websocketpp/out/build/x64-Debug/CMakeFiles/list_install_components.dir
+E:/Design/CodingStuff/C++/StreamDeck-AudioSwitcher/Sources/Vendor/websocketpp/out/build/x64-Debug/websocketpp/CMakeFiles/install/local.dir
+E:/Design/CodingStuff/C++/StreamDeck-AudioSwitcher/Sources/Vendor/websocketpp/out/build/x64-Debug/websocketpp/CMakeFiles/install.dir
+E:/Design/CodingStuff/C++/StreamDeck-AudioSwitcher/Sources/Vendor/websocketpp/out/build/x64-Debug/websocketpp/CMakeFiles/edit_cache.dir
+E:/Design/CodingStuff/C++/StreamDeck-AudioSwitcher/Sources/Vendor/websocketpp/out/build/x64-Debug/websocketpp/CMakeFiles/rebuild_cache.dir
+E:/Design/CodingStuff/C++/StreamDeck-AudioSwitcher/Sources/Vendor/websocketpp/out/build/x64-Debug/websocketpp/CMakeFiles/list_install_components.dir
